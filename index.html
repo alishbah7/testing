@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-track{
+    background: linear-gradient(rgb(235, 244, 255), rgb(226, 226, 226));
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(rgb(90, 96, 255), rgb(72, 225, 255));
+    border-radius: 10px;
+}
+section{
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 40%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+
+}
+.colorDivMain{
+    display: flex;
+    justify-content: end;
+}
+.colorDivSub{
+    width: 40%; 
+    height: 40px;
+    background-color: rgb(70, 67, 67);
+}
+.user-name{
+    display: flex; 
+    justify-content: end;
+}
+.userName{
+    width: 80%;
+    height: 70px;
+    background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
+    font-family: cursive;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding-left: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+.userName h1{
+    letter-spacing: 4px;
+    font-size: 30px;
+    color: white;
+}
+.secondPart{
+    display: flex;
+    width: 100%;
+}
+.firstSec{
+    width: 60%;
+    padding-top: 25px;
+}
+.objective{
+    width: 80%;
+}
+.objective h1, .education h1, .experience h1{
+    width: 250px;
+    background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
+    color: white;
+    display: flex;
+    justify-content: end;
+    padding-right: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.objective h5{
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 14px;
+    padding-left: 20px;
+}
+.secondSec{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color:  rgb(70, 67, 67);
+    padding-top: 25px;
+}
+.contact h1, .skills h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 140px;
+    font-size: 20px;
+    color: white;
+    font-family: cursive;
+    letter-spacing: 2px;
+    border: 2px solid rgb(88, 190, 234);
+}
+.contact p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    color: white;
+}
+.skills{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+ul{
+    list-style-type: square;
+}
+ul li::marker{
+    color: rgb(159, 159, 255);
+}
+.skills ul{
+    width: 80%;
+    color: white;
+}
+.skills ul li, .education ul li, .experience ul li{
+    margin-bottom: 8px;
+}
+
+/*---- RESPONSIVENESS ----*/
+@media screen and (max-width: 1150px) {
+    .container{
+        color: white;
+        background-color: rgb(70, 67, 67)
+    }
+    .colorDivMain, .colorDivSub{
+        display: none;
+    }
+    .user-name{
+        justify-content: center;
+        align-items: center;
+    }
+    .userName{
+        width: 100%;
+        border-radius: 0;
+        justify-content: center;
+    }
+    .secondPart{
+        flex-direction: column;
+    }
+    .firstSec{
+        width: 100%;
+    }
+    .objective h1, .education h1, .experience h1{
+        font-family: cursive;
+        width: 100%;
+        justify-content: start;
+        background: none;
+        padding-left: 20px;
+    }
+    #obj{
+        width: 100%;
+        padding: 10px 10% 5px;
+    }
+    ul{
+        margin-left: 10px;
+        padding-bottom: 5px;
+    }
+    .btmLine{
+        width: 100px;
+        height: 4px;
+        border-radius: 2px;
+        background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
+        margin-top: -10px;
+        margin-left: 20px;
+    }
+    .secondSec{
+        width: 100%;
+        align-items: start;
+        margin-top: -30px;
+    }
+    .contactUpperLine{
+        margin: 10px 10% 10px;
+        width: 80%;
+        height: 5px;
+        border-radius: 10px;
+        background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
+        order: 2;
+    }
+    .contact{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        order: 2;
+    }
+    .skills h1{
+        border: none;
+        margin-left: -20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .container{
+        width: 60%;
+    }
+}
+@media screen and (max-width: 580px) {
+    .container{
+        width: 90%;
+    }
+}
+@media screen and (max-width: 380px) {
+    .container{
+        width: 100%;
+    }
+}
+@media print{
+    /* body *{
+        visibility: hidden;
+    } */
+    .container *{
+        visibility: visible;
+    }
+    .container{
+        border: 2px solid black;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+
+    }
+    .btns{
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <section>
+        <div class="container">
+            <div class="colorDivMain"><div class="colorDivSub"></div></div>
+            <div class="user-name">
+                <div class="userName">
+                    <h1 id="name">Alishbah</h1>
+                </div>
+            </div>
+            <div class="secondPart">
+                <div class="firstSec">
+                    <div class="objective">
+                        <h1>Objective</h1>
+                        <div class="btmLine"></div>
+                        <h5 id="obj">To get an opportunity where I can make the best of the potential and contribute to its growth.</h5>
+                    </div>
+                    <div class="education">
+                        <h1>Education</h1>
+                        <div class="btmLine"></div>
+                        <ul id="displayEdu">
+                            <li>Intetr - BAMM Pechs Govt. Girls College - Present</li>
+                            <li>Matric - Oxbridge Secondary And Higher Secondary School - 2022</li>
+                        </ul>
+                    </div>
+                    <div class="experience">
+                        <h1>Experience</h1>
+                        <div class="btmLine" style="width: 110px;"></div>
+                        <ul id="displayExp">
+                            <li>Manager - XYZ Corp - 2004</li>
+                            <li>Advisor - ABC Enterprise - 2002</li>
+                            <li>Teacher - 123 School - 2001</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="secondSec">
+                    <div class="contactUpperLine"></div>
+                    <div class="contact">
+                        <h1>Contact</h1>
+                        <p id="ph">0909090909090</p>
+                        <p id="em">hello@gmail.com</p>
+                    </div>
+                    <div class="skills">
+                        <h1>Skills</h1>
+                        <div class="btmLine" style="width: 65px;"></div>
+                        <ul id="displaySkills">
+                            <li>Full Stack Developement</li>
+                            <li>Accounts Management</li>
+                            <li>Editing And Designing</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="btns">
+        <button id="bgColorChanger">Change Background Color</button>
+        <button id="textColorChanger">Changer Text Color</button>
+        <button id="editBtn">Edit</button>
+        <button id="downloadBtn">Download</button>
+        <button id="shareBtn">Share</button>
+    </div>
+    <script>
+        //---==== RESUME ====---//
+var userName = localStorage.getItem('userName');
+var objective = localStorage.getItem('objective');
+var phone = localStorage.getItem('phone');
+var email = localStorage.getItem('email');
+var edu = localStorage.getItem('education');
+var exp = localStorage.getItem('experience');
+var skills = localStorage.getItem('skills');
+if (userName &&
+    objective &&
+    phone &&
+    email &&
+    edu &&
+    exp &&
+    skills) {
+    var eduArray = edu.split(',');
+    var expArray = exp.split(',');
+    var skillsArray = skills.split(',');
+    var name_1 = document.getElementById('name');
+    var obj = document.getElementById('obj');
+    var ph = document.getElementById('ph');
+    var em = document.getElementById('em');
+    var displayEdu_1 = document.getElementById('displayEdu');
+    var displayExp_1 = document.getElementById('displayExp');
+    var displaySkills_1 = document.getElementById('displaySkills');
+    name_1.innerHTML = userName;
+    obj.innerHTML = objective;
+    ph.innerHTML = phone;
+    em.innerHTML = email;
+    eduArray.forEach(function (valueEdu) {
+        displayEdu_1.innerHTML += "<li>".concat(valueEdu, "</li>");
+    });
+    expArray.forEach(function (valueExp) {
+        displayExp_1.innerHTML += "<li>".concat(valueExp, "</li>");
+    });
+    skillsArray.forEach(function (valueSkills) {
+        displaySkills_1.innerHTML += "<li>".concat(valueSkills, "</li>");
+    });
+}
+;
+//--==== DOWNLOADING RESUME FUNCTIONALITY ====--//
+var download = document.getElementById('downloadBtn');
+download.addEventListener('click', function () {
+    window.print();
+});
+//--==== EDITING FUNCTIOANLITY ====--//
+var editBtn = document.getElementById('edit');
+editBtn.addEventListener('click', function () {
+    window.location.href = '../form/index.html';
+});
+//--==== SHARING FUNCTIOANLITY ====--//
+
+    </script>
+</body>
+</html>

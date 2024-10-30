@@ -3,376 +3,260 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-*{
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-::-webkit-scrollbar{
-    width: 12px;
-}
-::-webkit-scrollbar-track{
-    background: linear-gradient(rgb(235, 244, 255), rgb(226, 226, 226));
-}
-::-webkit-scrollbar-thumb{
-    background: linear-gradient(rgb(90, 96, 255), rgb(72, 225, 255));
-    border-radius: 10px;
-}
-section{
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.container{
-    width: 40%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    border: 2px solid black;
-
-}
-.colorDivMain{
-    display: flex;
-    justify-content: end;
-}
-.colorDivSub{
-    width: 40%; 
-    height: 40px;
-    background-color: rgb(70, 67, 67);
-}
-.user-name{
-    display: flex; 
-    justify-content: end;
-}
-.userName{
-    width: 80%;
-    height: 70px;
-    background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
-    font-family: cursive;
-    font-weight: bolder;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    padding-left: 20px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
-.userName h1{
-    letter-spacing: 4px;
-    font-size: 30px;
-    color: white;
-}
-.secondPart{
-    display: flex;
-    width: 100%;
-}
-.firstSec{
-    width: 60%;
-    padding-top: 25px;
-}
-.objective{
-    width: 80%;
-}
-.objective h1, .education h1, .experience h1{
-    width: 250px;
-    background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
-    color: white;
-    display: flex;
-    justify-content: end;
-    padding-right: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 18px;
-    letter-spacing: 2px;
-}
-.objective h5{
-    font-size: 15px;
-    letter-spacing: 1px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 500;
-    line-height: 20px;
-    margin-top: 14px;
-    padding-left: 20px;
-}
-.secondSec{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color:  rgb(70, 67, 67);
-    padding-top: 25px;
-}
-.contact h1, .skills h1{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 140px;
-    font-size: 20px;
-    color: white;
-    font-family: cursive;
-    letter-spacing: 2px;
-    border: 2px solid rgb(88, 190, 234);
-}
-.contact p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 140px;
-    color: white;
-}
-.skills{
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column;
-}
-ul{
-    font-family: Arial, Helvetica, sans-serif;
-    list-style-type: square;
-}
-ul li::marker{
-    color: rgb(159, 159, 255);
-}
-.skills ul{
-    width: 80%;
-    color: white;
-}
-.skills ul li, .education ul li, .experience ul li{
-    margin-bottom: 8px;
-}
-
-/*---- RESPONSIVENESS ----*/
-@media screen and (max-width: 1150px) {
-    .container{
-        color: white;
-        background-color: rgb(70, 67, 67)
-    }
-    .colorDivMain, .colorDivSub{
-        display: none;
-    }
-    .user-name{
-        justify-content: center;
-        align-items: center;
-    }
-    .userName{
-        width: 100%;
-        border-radius: 0;
-        justify-content: center;
-    }
-    .secondPart{
-        flex-direction: column;
-    }
-    .firstSec{
-        width: 100%;
-    }
-    .objective h1, .education h1, .experience h1{
-        font-family: cursive;
-        width: 100%;
-        justify-content: start;
-        background: none;
-        padding-left: 20px;
-    }
-    #obj{
-        width: 100%;
-        padding: 10px 10% 5px;
-    }
-    ul{
-        margin-left: 10px;
-        padding-bottom: 5px;
-    }
-    .btmLine{
-        width: 100px;
-        height: 4px;
-        border-radius: 2px;
-        background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
-        margin-top: -10px;
-        margin-left: 20px;
-    }
-    .secondSec{
-        width: 100%;
-        align-items: start;
-        margin-top: -30px;
-    }
-    .contactUpperLine{
-        margin: 10px 10% 10px;
-        width: 80%;
-        height: 5px;
-        border-radius: 10px;
-        background: linear-gradient(to right, rgb(88, 190, 234), rgb(159, 159, 255));
-        order: 2;
-    }
-    .contact{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        order: 2;
-    }
-    .skills{
-        width: 100%;
-        justify-content: start;
-        align-items: start;
-    }
-    .skills h1{
-        margin-left: -20px;
-        border: none;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
         
-    }
-}
-@media screen and (max-width: 1000px) {
-    .container{
-        width: 60%;
-    }
-}
-@media screen and (max-width: 850px) {
-    .education, .experience{
-        width: 80%;
-    }
-}
-@media screen and (max-width: 580px) {
-    .container{
-        width: 90%;
-    }
-}
-@media screen and (max-width: 380px) {
-    .container{
-        width: 100%;
-    }
-}
-@media print {
-    body {
-        -webkit-print-color-adjust: exact;
-        color-adjust: exact;
-    }
-    .container{
-        width: 100%;
-    }
-    .btns{
-        display: none;
-    }
-}
+        .body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .resume-container {
+            max-width: 600px;
+            background-color: #edf5ed;
+            /* box-shadow: 0px 1px 25px rgba(0, 0, 0); */
+        }
+
+        .header {
+            background-color: #1a2a3a;
+            padding: 20px;
+            color: #fff;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            color: #fff5bf;
+        }
+
+        .header p {
+            font-size: 16px;
+            margin-top: 5px;
+            color: #d3d3d3;
+        }
+
+        .content {
+            padding: 20px;
+            display: flex;
+            /* flex-wrap: wrap; */
+            gap: 20px;
+        }
+
+        .left-section {
+            width: 35%;
+        }
+
+        .right-section {
+            width: 60%;
+        }
+
+        .section h2 {
+            color: #3e3d34;
+            font-size: 20px;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #ffd700;
+            padding-bottom: 5px;
+        }
+
+        .contact-info, .skills {
+            margin-bottom: 20px;
+        }
+
+        .contact-info ul, .skills ul {
+            list-style-type: none;
+            line-height: 1.6;
+        }
+
+        .profile, .work-experience, .education {
+            margin-bottom: 20px;
+        }
+
+        .work-experience .job, .education .school {
+            margin-bottom: 15px;
+        }
+
+        .job-title, .school-title {
+            font-weight: bold;
+            color: #333;
+        }
+
+        .job-date, .school-date {
+            color: #888;
+        }
+        button{
+            background-color: #1a2a3a;
+            color: #fff5bf;
+            width: 100px;
+            height: 26px;
+            border-radius: 5px;
 
 
-
+        }
+        /* Responsive styling */
+        @media (max-width: 768px) {
+            .section h2{
+                width: 160px;
+            }
+            .resume-container {
+                padding: 15px;
+            }
+            .header h1 {
+                font-size: 28px;
+            }
+            .header p, .section h2 {
+                font-size: 14px;
+            }
+            .contact-info ul, .skills ul, .profile p, .work-experience p, .education p {
+                font-size: 14px;
+            }
+        }
+        @media screen and (max-width:600px) {
+            .profile p, .work-experience p, .education p, li{
+                font-size: 10px;
+            }
+        }
+        @media screen and (max-width:550px) {
+            .section h2{
+                width: 120px;
+            }
+            
+        }
+        @media screen and (max-width:480px) {
+            li{
+                font-size: 8px;
+            }
+            .section h2{
+                font-size: 12px;
+                width: 100px;
+            }
+            .left-section{
+                margin-left: -10px;
+            }
+        }
+        @media screen and (max-width: 400px) {
+            #paraWidth{
+                width: 160px;
+            }  
+        }
+        @media screen and (max-width: 380px) {
+            #paraWidth{
+                width: 140px;
+            }  
+        }
+        @media screen and (max-width: 360px) {
+            #paraWidth{
+                width: 120px;
+            }  
+        }
+        @media screen and (max-width: 335px) {
+            .resume-container{
+                max-width: 300px;
+            }
+        }
+        @media screen and (max-width: 300px) {
+            .resume-container{
+                max-width: 260px;
+            }
+            .left-section{
+                margin-left: -20px;
+            }
+        }
+        @media print{
+            .resume-container {
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            #download{
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <section>
-        <div class="container">
-            <div class="colorDivMain"><div class="colorDivSub"></div></div>
-            <div class="user-name">
-                <div class="userName">
-                    <h1 id="name">Alishbah</h1>
+    <div class="body">
+    <div class="resume-container">
+        <div class="header">
+            <h1>Jonathan Doe</h1>
+            <p>Creative Designer</p>
+        </div>
+        <div class="content">
+            <!-- Left Section: Contact and Skills -->
+            <div class="left-section">
+                <div class="section contact-info">
+                    <h2>Contact</h2>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 123-456-7890</li>
+                        <li><i class="fas fa-envelope"></i> email@example.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> New York, NY</li>
+                    </ul>
+                </div>
+                <div class="section skills">
+                    <h2>Skills</h2>
+                    <ul>
+                        <li>UI Design</li>
+                        <li>User Experience</li>
+                        <li>Web Development</li>
+                        <li>Responsive Design</li>
+                        <li>Graphic Design</li>
+                        <li>Project Management</li>
+                    </ul>
                 </div>
             </div>
-            <div class="secondPart">
-                <div class="firstSec">
-                    <div class="objective">
-                        <h1>Objective</h1>
-                        <div class="btmLine"></div>
-                        <h5 id="obj">To get an opportunity where I can make the best of the potential and contribute to its growth.</h5>
+            
+            <!-- Right Section: Profile, Experience, and Education -->
+            <div class="right-section">
+                <div class="section profile" style="margin-left: 40px;">
+                    <h2>Profile</h2>
+                    <p id="paraWidth">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer auctor, orci ac luctus consequat, orci est viverra risus, a condimentum urna eros sed elit.</p>
+                </div>
+                <div class="section work-experience" style="margin-left: 40px;">
+                    <h2>Work Experience</h2>
+                    <div class="job">
+                        <p class="job-title">Lead Designer</p>
+                        <p class="job-date">2018 - Present</p>
+                        <p id="paraWidth">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac odio et urna tristique pharetra.</p>
                     </div>
-                    <div class="education">
-                        <h1>Education</h1>
-                        <div class="btmLine"></div>
-                        <ul id="displayEdu">
-                            <li>Intetr - BAMM Pechs Govt. Girls College - Present</li>
-                            <li>Matric - Oxbridge Secondary And Higher Secondary School - 2022</li>
-                        </ul>
-                    </div>
-                    <div class="experience">
-                        <h1>Experience</h1>
-                        <div class="btmLine" style="width: 110px;"></div>
-                        <ul id="displayExp">
-                            <li>Manager - XYZ Corp - 2004</li>
-                            <li>Advisor - ABC Enterprise - 2002</li>
-                            <li>Teacher - 123 School - 2001</li>
-                        </ul>
+                    <div class="job">
+                        <p class="job-title">Junior Designer</p>
+                        <p class="job-date">2015 - 2018</p>
+                        <p id="paraWidth">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac odio et urna tristique pharetra.</p>
                     </div>
                 </div>
-                <div class="secondSec">
-                    <div class="contactUpperLine"></div>
-                    <div class="contact">
-                        <h1>Contact</h1>
-                        <p id="ph">0909090909090</p>
-                        <p id="em">hello@gmail.com</p>
+                <div class="section education" style="margin-left: 40px;">
+                    <h2>Education</h2>
+                    <div class="school">
+                        <p class="school-title">Bachelor of Arts in Graphic Design</p>
+                        <p class="school-date">2011 - 2015</p>
+                        <p id="paraWidth">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
-                    <div class="skills">
-                        <h1>Skills</h1>
-                        <div class="btmLine" style="width: 65px;"></div>
-                        <ul id="displaySkills">
-                            <li>Full Stack Developement</li>
-                            <li>Accounts Management</li>
-                            <li>Editing And Designing</li>
-                        </ul>
+                    <div class="school">
+                        <p class="school-title">Diploma in Multimedia</p>
+                        <p class="school-date">2009 - 2011</p>
+                        <p id="paraWidth">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <div class="btns">
-        <button id="bgColorChanger">Change Background Color</button>
-        <button id="textColorChanger">Changer Text Color</button>
-        <button id="editBtn">Edit</button>
-        <button id="downloadBtn">Download</button>
-        <button id="shareBtn">Share</button>
     </div>
+</div>
+<div style="height: 60px; width: 100%; display: flex; align-items: center; justify-content: center;">
+    <button id="download">Download</button>
+</div>
     <script>
-        //---==== RESUME ====---//
-var userName = localStorage.getItem('userName');
-var objective = localStorage.getItem('objective');
-var phone = localStorage.getItem('phone');
-var email = localStorage.getItem('email');
-var edu = localStorage.getItem('education');
-var exp = localStorage.getItem('experience');
-var skills = localStorage.getItem('skills');
-if (userName &&
-    objective &&
-    phone &&
-    email &&
-    edu &&
-    exp &&
-    skills) {
-    var eduArray = edu.split(',');
-    var expArray = exp.split(',');
-    var skillsArray = skills.split(',');
-    var name_1 = document.getElementById('name');
-    var obj = document.getElementById('obj');
-    var ph = document.getElementById('ph');
-    var em = document.getElementById('em');
-    var displayEdu_1 = document.getElementById('displayEdu');
-    var displayExp_1 = document.getElementById('displayExp');
-    var displaySkills_1 = document.getElementById('displaySkills');
-    name_1.innerHTML = userName;
-    obj.innerHTML = objective;
-    ph.innerHTML = phone;
-    em.innerHTML = email;
-    eduArray.forEach(function (valueEdu) {
-        displayEdu_1.innerHTML += "<li>".concat(valueEdu, "</li>");
-    });
-    expArray.forEach(function (valueExp) {
-        displayExp_1.innerHTML += "<li>".concat(valueExp, "</li>");
-    });
-    skillsArray.forEach(function (valueSkills) {
-        displaySkills_1.innerHTML += "<li>".concat(valueSkills, "</li>");
-    });
-}
-;
-//--==== DOWNLOADING RESUME FUNCTIONALITY ====--//
-var download = document.getElementById('downloadBtn');
-download.addEventListener('click', function () {
-    window.print();
-});
-//--==== EDITING FUNCTIOANLITY ====--//
-var editBtn = document.getElementById('edit');
-editBtn.addEventListener('click', function () {
-    window.location.href = '../form/index.html';
-});
-//--==== SHARING FUNCTIOANLITY ====--//
+        let downloadBtn = document.getElementById('download')
 
+        downloadBtn.addEventListener('click', function(){
+            window.print()
+        })
     </script>
 </body>
 </html>
